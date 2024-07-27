@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wise dollar Details</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 5px 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied to clipboard: " + text);
+            });
+        }
+
+        function printTable() {
+            window.print();
+        }
+    </script>
+</head>
+<body>
+
+<h2>Wise dollar Details</h2>
+
+<table>
+    <tr>
+        <th>Field</th>
+        <th>Details</th>
+        <th>Actions</th>
+    </tr>
+    <tr>
+        <td>Account Holder</td>
+        <td id="accountHolder">Samer Alsaadni</td>
+        <td><button onclick="copyToClipboard(document.getElementById('accountHolder').innerText)">Copy</button></td>
+    </tr>
+    <tr>
+        <td>ACH and Wire Routing Number</td>
+        <td id="routingNumber">026073150</td>
+        <td><button onclick="copyToClipboard(document.getElementById('routingNumber').innerText)">Copy</button></td>
+    </tr>
+    <tr>
+        <td>Account Number</td>
+        <td id="accountNumber">8314035692</td>
+        <td><button onclick="copyToClipboard(document.getElementById('accountNumber').innerText)">Copy</button></td>
+    </tr>
+    <tr>
+        <td>Account Type</td>
+        <td id="accountType">Checking</td>
+        <td><button onclick="copyToClipboard(document.getElementById('accountType').innerText)">Copy</button></td>
+    </tr>
+    <tr>
+        <td>Bank Name and Address</td>
+        <td id="bankAddress">Community Federal Savings Bank, 89-16 Jamaica Ave, Woodhaven NY 11421, United States</td>
+        <td><button onclick="copyToClipboard(document.getElementById('bankAddress').innerText)">Copy</button></td>
+    </tr>
+</table>
+
+<button onclick="printTable()">Print</button>
+
+
+<img src="a.png" width="300px" alt="">
+</body>
+</html>
